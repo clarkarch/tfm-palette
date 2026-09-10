@@ -16,11 +16,6 @@ Confirm, and the `palette` category appears in the Plugins view. No restart need
 
 Manual install: copy `palette.ts` to `~/.config/tfm/plugins/palette/palette.ts`.
 
-## Use
-
-- Plugins view → `Command palette…` row, or
-- right-click any file → `Command palette…`.
-
 Updates: the plugin's `Update from git` row pulls the latest.
 
 ## License
