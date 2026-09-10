@@ -8,9 +8,9 @@
 // Manual install: copy this file to ~/.config/tfm/plugins/palette/palette.ts
 // (or $XDG_CONFIG_HOME/tfm/plugins/palette/palette.ts).
 //
-// Opens from its Plugins-view row (and the file menu) — a global hotkey
-// would need a core [keys] row, which core deliberately keeps closed to
-// plugins. No imports needed.
+// Opens with ctrl+p (remap it in the Plugins view → palette →
+// "Command palette (key)" — binds live in this plugin's own settings, never
+// in core config) or from its Plugins-view row. No imports needed.
 
 const plugin = {
   name: "palette",
@@ -25,7 +25,7 @@ const plugin = {
     };
     return {
       rows: [{ kind: "action", label: "Command palette…", run: open }],
-      fileMenu: () => [{ label: "Command palette…", run: () => open() }],
+      commands: [{ id: "palette:open", title: "Command palette", defaultBinds: ["ctrl+p"], run: open }],
     };
   },
 };
